@@ -10,6 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
   ];
   const articles = document.querySelectorAll("article");
   articles.forEach(function(element, index){
-	  element.classList.add(R.pluck('class'), arrayToPluck)[index]);
+	  element.classList.add(R.pluck('class', arrayToPluck)[index]);
   });
 });
