@@ -1,5 +1,5 @@
 import "../scss/app.scss";
-
+import * as R from 'ramda';
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
 
@@ -9,4 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
     { job: "programmer", class: "is-danger" },
   ];
   const articles = document.querySelectorAll("article");
+  articles.forEach(function(element, index){
+	  element.classList.add(R.pluck('class'), arrayToPluck)[index]);
+  });
 });
